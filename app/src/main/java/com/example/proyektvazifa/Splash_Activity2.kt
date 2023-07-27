@@ -47,6 +47,8 @@ class Splash_Activity2 : AppCompatActivity() {
             override fun onFinish() {
                 if (email == null && pass == null) {
                     Intent(this@Splash_Activity2, Loging_Activity2::class.java).also {
+                        Toast.makeText(this@Splash_Activity2, "$email $pass", Toast.LENGTH_SHORT)
+                            .show()
                         startActivity(it)
                         finish()
                     }
@@ -55,10 +57,7 @@ class Splash_Activity2 : AppCompatActivity() {
                         startActivity(it)
                         finish()
                     }
-
                 }
-                startActivity(Intent(this@Splash_Activity2, Loging_Activity2::class.java))
-                finish()
             }
         }.start()
 
